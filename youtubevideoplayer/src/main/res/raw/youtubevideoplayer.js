@@ -113,39 +113,39 @@
   }
 
   function onReady(e){
-    window.JavaScriptInterface.onReady(e);
+    window.JSInterface.onReady(e);
   }
 
   function onStateChange(e){
-    window.JavaScriptInterface.onStateChange(e);
+    window.JSInterface.onStateChange(e);
   }
 
   function onPlaybackQualityChange(e){
-    window.JavaScriptInterface.onPlaybackQualityChange(e);
+    window.JSInterface.onPlaybackQualityChange(e);
   }
 
   function onPlaybackRateChange(e){
-    window.JavaScriptInterface.onPlaybackRateChange(e);
+    window.JSInterface.onPlaybackRateChange(e);
   }
 
   function onError(e){
-    window.JavaScriptInterface.onError(e);
+    window.JSInterface.onError(e);
   }
 
   function onApiChange(e){
-    window.JavaScriptInterface.onApiChange(e);
+    window.JSInterface.onApiChange(e);
   }
 
   function setCurrentSeconds(){
-    window.JavaScriptInterface.currentSeconds(player.getCurrentTime());
+    window.JSInterface.currentSeconds(player.getCurrentTime());
   }
 
   function sendDuration(){
-    window.JavaScriptInterface.duration(player.getDuration());
+    window.JSInterface.duration(player.getDuration());
   }
 
   function setLog(msg){
-    window.JavaScriptInterface.logs(msg);
+    window.JSInterface.logs(msg);
   }
 
   function onSeekTo(startSeconds){

@@ -71,34 +71,30 @@ class YouTubeVideoPlayer : WebView {
         clearHistory()
     }
 
-    @SuppressLint("JavascriptInterface", "SetJavaScriptEnabled")
+    @SuppressLint("JavascriptInterface")
     private fun initialize(videoId: String, youTubeListener: PlayerCallback?) {
         val setting = this.settings
         setting.javaScriptEnabled = true
         setting.useWideViewPort = true
         setting.loadWithOverviewMode = true
         setting.layoutAlgorithm = WebSettings.LayoutAlgorithm.NORMAL
+        setting.cacheMode = WebSettings.LOAD_NO_CACHE
         setting.pluginState = WebSettings.PluginState.ON
         setting.pluginState = WebSettings.PluginState.ON_DEMAND
         setting.allowContentAccess = true
         setting.allowFileAccess = true
+
         this.youTubeListener = youTubeListener
         bridge = JavaScriptBridge(this.youTubeListener)
         setLayerType(View.LAYER_TYPE_NONE, null)
         measure(MeasureSpec.UNSPECIFIED, MeasureSpec.UNSPECIFIED)
-        addJavascriptInterface(bridge, "JavaScriptInterface")
+        addJavascriptInterface(bridge, "JSInterface")
         this.isLongClickable = true
         this.webChromeClient = WebChromeClient()
         this.webViewClient = getMpWebViewClient()
         setOnLongClickListener { true }
         setWebContentsDebuggingEnabled(true)
-        loadDataWithBaseURL(
-            "https://www.youtube.com",
-            getVideoHTML(videoId),
-            "text/html",
-            "utf-8",
-            null
-        )
+        loadDataWithBaseURL("https://www.youtube.com", getVideoHTML(videoId), "text/html", "utf-8", null)
     }
 
     fun initializeWithUrl(
