@@ -175,12 +175,6 @@ class YouTubeVideoPlayer : WebView {
         this.loadUrl("javascript:unMute()")
     }
 
-    fun isMuted(isMuted:(isMuted:Boolean?) -> Unit) {
-        evaluateJavascript("javascript:isMuted()") {
-            isMuted.invoke(it?.toBoolean())
-        }
-    }
-
     fun setVolume(volume: Int) {
         this.loadUrl("javascript:setVolume($volume)")
     }

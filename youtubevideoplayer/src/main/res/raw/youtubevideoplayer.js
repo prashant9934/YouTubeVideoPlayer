@@ -39,7 +39,7 @@
       },
       playerVars: {
         'autoplay': [AUTO_PLAY],
-        'autohide':[AUTO_HIDE],
+        'autohide': [AUTO_HIDE],
         'rel': [REL],
         'showinfo': [SHOW_INFO],
         'enablejsapi': [ENABLE_JS_API],
@@ -49,7 +49,7 @@
         'fs': [FS],
         'mute': [MUTE],
         'cc_load_policy': [CC_LOAD_POLICY],
-		'origin' : 'https://www.youtube.com'
+		'origin': 'https://www.youtube.com'
       }
     });
   }
@@ -176,11 +176,6 @@
     player.setVolume([AUDIO_VOLUME]);
   }
 
-  function playFullscreen(width, height){
-    setLog(width + "_" + height)
-    player.playFullscreen(width, height)
-  }
-
   function playNextVideo() {
       player.nextVideo()
   }
@@ -203,10 +198,6 @@
 
   function unMute(){
     player.unMute()
-  }
-
-  function isMuted(){
-    return player.isMuted()
   }
 
   function setVolume(volume){

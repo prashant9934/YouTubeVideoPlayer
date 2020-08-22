@@ -1,7 +1,6 @@
 package `in`.prashant.youtubeplayerdemo
 
 import `in`.prashant.youtubeplayerdemo.databinding.ActivityMainBinding
-import `in`.prashant.youtubevideoplayer.YouTubeVideoPlayer
 import `in`.prashant.youtubevideoplayer.callBack.PlayerCallback
 import `in`.prashant.youtubevideoplayer.enums.PLAYER_STATE
 import `in`.prashant.youtubevideoplayer.model.PlayerParams
@@ -16,7 +15,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var binding:ActivityMainBinding
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,10 +39,6 @@ class MainActivity : AppCompatActivity() {
             videoParams,
             getCallBack()
         )
-
-        binding.videoPlayer.isMuted {
-            Log.d("ismuted", it.toString())
-        }
     }
 
     private fun getCallBack(): PlayerCallback {
