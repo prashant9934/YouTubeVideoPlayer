@@ -1,4 +1,4 @@
-![Release](https://jitpack.io/v/prashant9934/YouTubeVideoPlayer.svg) (https://jitpack.io/#prashant9934/YouTubeVideoPlayer/v0.1-alpha)
+![Release](https://jitpack.io/v/prashant9934/YouTubeVideoPlayer.svg) (https://jitpack.io/#prashant9934/YouTubeVideoPlayer/1.0)
 
 # YouTubeVideoPlayer
 this player is using Iframe YouTube api Internally to play YouTube video
@@ -16,7 +16,7 @@ To add library in your project add
 #2. add this inside gradle dependencies
 
     dependencies {
-	    implementation 'com.github.prashant9934:YouTubeVideoPlayer:v0.1-alpha'
+	    implementation 'com.github.prashant9934:YouTubeVideoPlayer:1.0'
     }
 	
 	
